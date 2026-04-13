@@ -14,7 +14,8 @@ public class Main {
  public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Login signIn = new Login();
-       
+        
+        // registering
         System.out.println("===Register===");
         
         System.out.println("Enter Username: ");
