@@ -24,6 +24,10 @@ public class Login {
     }
     
     public String registerUser(String userName, String password, String cellPhoneNumber){
+        this.userName = userName;
+        this.password = password;
+        this.cellPhoneNumber = cellPhoneNumber;
+        
         if(!checkUserName(userName)){
             return "Username is not correctly formatted. Please ensure that your username contains an underscore and is no more than five characters in length";
         }
@@ -33,9 +37,7 @@ public class Login {
         else if(!checkCellPhoneNumber(cellPhoneNumber)){
             return "Cell phone incorrectly formatted or does not contain international code";
         }
-        this.userName = userName;
-        this.password = password;
-        this.cellPhoneNumber = cellPhoneNumber;
+        
         return "User successfully registered";
     }
     public boolean loginUser(String userName, String password){
